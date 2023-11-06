@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles4.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>UPLOAD</title>
+</head>
+
+<body>
+
+  <div class="pat">
+    <a href="http://localhost/login2/signup.php" class="button">SIGN UP</a>
+
+    <a href="http://localhost/login2/login.php" class="button">LOG IN</a>
+    <p id="time"></p>
+  </div>
+  <header>
+
+    <h1> <span>UPLOAD</span> SECTION</h1>
+    <h3>No More Wasted Effort</h3>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html">TOP DEALS</a></li>
+      <li><a href="sell.html">SELL</a></li>
+      <li><a href="rent.html">RENT A SPACE</a></li>
+      <li><a href="member_arena.html">MEMBER ARENA</a></li>
+      <li><a href="blog.html">BLOG</a></li>
+      <li><a href="upload.html">UPLOAD</a></li>
+      <li><a href="reg.html">PROMOTE YOUR COMPANY</a></li>
+      <li><a href="agricKonnectsServices.html">AGRICKONNECTS SERVICES</a></li>
+
+    </ul>
+
+
+    <form action="./search.php" class="header_search_form" method="GET">
+      <input type="search" placeholder="Search for anything" required="required">
+      <input type="submit" class="search_input" name="search" value="search">
+
+    </form>
+  </header>
+  <script>
+
+    function populate(slct1, slct2) {
+
+      var slct1 = document.getElementById("slct1");
+      var slct2 = document.getElementById("slct2");
+
+      slct2.innerHTML = '';
+      if (slct1.value == "animal") {
+        var optionArray = ["|", "animalProduct|Animal Product", "animalFeed|Animal Feed", "fish|Fish", "ruminantAnimal|Ruminant Animal", "poultry|Poultry", "nonRuminantAnimal|Non-Ruminant Animal", "animalService|Animal Service", "carnivorusAniaml|Carnivorus Animal", "omnivorusAniaml|Omnivorus Animal"];
+      } else if (slct1.value == "crop") {
+        var optionArray = ["|", "cerealCrop|Cereal Crop", "vegetableCrop|Vegetable Crop", "tuberCrop|Root & Tuber Crop", "oilCrop|Oil Crop", "fibreCrop|Fibre Crop", "spicesCrop|Spices Crop", "latexCrop|Latex Crop", "pulsesCrop|Pulses{Grain Legumes} Crop", "beveragesCrop|Beverages Crop"];
+
+      }
+      else if (slct1.value == "land") {
+        var optionArray = ["|", "office|Office", "ranches|Ranches", , "vacantLand|Vacant Land", "ochard|Ochard", "property|Property", "timberLand|Timber Land", "farmLand|Farm Land", "others|Others"];
+
+      }
+      else if (slct1.value == "service") {
+        var optionArray = ["|", "vertinary|Vertinary & Health", "accouting|Accounting & Finance", "marketing|Marketing & Sales", "engineering|Architectural & Engineering", "security|Security", "manualJob|Manual Job", "logistics|Logistics Driver", "trainer|Trainer & Consultant", "others|Others"];
+
+      }
+      else if (slct1.value == "opportunities") {
+        var optionArray = ["|", "investment|Investment", "training|Training & Seminar", "fund|Funding Raising", "crowdfunding|Crowd funding", "partnership|Partnership", "intern|Internship"];
+      }
+      else if (slct1.value == "fruit") {
+        var optionArray = ["|", "apple|Apple & Peaars", "citrus|Citrus", "stoneFruits|Stone Fruit", "tropical|Tropical & Exotic", "berries|Berries", "melon|melons"];
+      }
+      else if (slct1.value == "logistics") {
+        var optionArray = ["|", "bus|Bus", "lorry|Lorry", "truck|Heavy Truck", "car|Car", "airCargo|Air Cargo", "shipCargo|Shop Cargo"];
+      }
+
+      else if (slct1.value == "equipment") {
+        var optionArray = ["|", "machinery|Machinery", "manual|Manual Farm Tools"];
+      }
+
+
+      else if (slct1.value == "byProduct") {
+        var optionArray = ["|", "animalproduct|Animal Product", "plantproduct|Plant Product"];
+      }
+
+      for (var option in optionArray) {
+        var pair = optionArray[option].split("|");
+        var newOption = document.createElement("option");
+        newOption.value = pair[0];
+        newOption.innerHTML = pair[1];
+        slct2.options.add(newOption);
+
+      }
+
+    }
+
+  </script>
+
+
+
+  <style>
+    textarea {
+      resize: none;
+      color: green;
+      border: 1px black;
+    }
+  </style>
+  <h2>UPLOAD YOUR
+    <select>
+      <option value="produce">PRODUCE</option>
+      <option value="product">PRODUCTS</option>
+      <option value="service">SERVICES</option>
+      <option value="expertise">EXPERTISE</option>
+    </select>
+  </h2>
+  Main Category :
+  <select id="slct1" name="slct1" onchange="populate('slct1','slct2')">
+    <option value=""></option>
+    <option value="animal">Animal</option>
+    <option value="crop">Crop</option>
+    <option value="land">Land & Property</option>
+    <option value="product">Product</option>
+    <option value="service">Services</option>
+    <option value="fruit">Fruit</option>
+    <option value="logistics">Logistics</option>
+    <option value="opportunities">Opportunities</option>
+    <option value="waste">Waste</option>
+    <option value="byProduct">By Product</option>
+    <option value="tourism">Tourism</option>
+    <option value="equipment">Equipment</option>
+    <option value="timber">Timber</option>
+  </select>
+  <br>
+  <br>
+  Sub Category:
+  <select id="slct2" name="slct2"></select>
+  <br>
+  <h4 id="welcome"></h4>
+  <br>
+
+  Price: <input type="number" id="price" name="price">
+  <br>
+  <div class="agric1">
+    <h1><a href="index.html">WITH AGRICKONNECTS NO MORE WASTED EFFORT</a></h1>
+  </div>
+  Description: <br><textarea type="text" name="pq_content" placeholder="TELL US MORE ABOUT WHAT YOU ARE OFFERING"
+    rows="10" cols="25"></textarea><br>
+  <br>
+  Image of Product/Service: <input type="file" name="img" multiple> <input type="file" name="img" multiple> <input
+    type="file" name="img" multiple> <input type="file" name="img" multiple> <br> <br>
+  Video of Product/Service:<input type="file" name="Video" multiple> <br>
+  <br>
+  <br>
+
+  <button onclick="">Upload</button>
+
+  <div style="margin-top:200px"></div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col">
+          <h6>CATEGORIES</h6>
+          <ul>
+            <li><a href="crop.html">CROP</a></li>
+            <li><a href="animal.html">ANIMAL</a></li>
+            <li><a href="service.html">SERVICE</a></li>
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li><a href="timber.html">TIMBER</a></li>
+            <li><a href="waste.html">WASTE</a></li>
+            <li><a href="logistics.html">LOGISTICS</a></li>
+            <li><a href="land.html">LAND & PROPERTY</a></li>
+            <li><a href="tourism.html">TOURISM</a></li>
+            <li><a href="fruit.html">FRUIT</a></li>
+            <li><a href="equipment.html">EQUIPMENT</a></li>
+            <li><a href="byeproduct.html">BYE Product</a></li>
+            <li><a href="opportunity.html">OPPORTUNITY</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>ABOUT AGRICKONNECTS</h6>
+          <p>AGRICKONNECTS is a trusted and the most realible online business-to-business(B2B) ecosystem for
+            agricultral produce,products & services
+            AGRICKONNECTS is designed for everyone. AGRICKONNECTS is where we connect you to your fortune by listing
+            your produce, products & services to millions of users across the globe
+            Are you a crop farmer,herder,bird farmer,fisherman,marketer,accountant,agent,veterinary doctor,food
+            scientist,manufacturer,consultant etc. AGRICKONNECTS is a place for you.
+            We connect the real sellers with genine buyers . USING AGRICKONNECTS IS VERY EASY AND SIMPLE.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h6>OUR PREMIUM SERVICES</h6>
+          <ul>
+            <li><a href="escrow.php">ESCROW</a></li>
+            <li><a href="rent.html">RENT SPACE</a></li>
+            <li><a href="ads.php">ADVERTISEMENT</a></li>
+            <li><a href="errands.php">RUNNING ERRANDS</a></li>
+            <li><a href="verified.php">VERIFIED BADGE</a></li>
+            <li><a href="logistics.php">LOGISTICS</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h6>CONTACT US</h6>
+          <p>+2349032809103</p>
+          <br>
+          <p>info@agrickonnects.com</p>
+        </div>
+        <div class="footer-col">
+          <h6> GET HELP</h6>
+          <ul>
+            <li><a href="service.html">FAQ</a></li>
+            <li><a href="service.html">GUIDE ON HOW TO SELL</a></li>
+            <li><a href="service.html">GUIDE ON HOW TO BUY</a></li>
+            <li><a href="service.html">TERMS & CONDITIONS</a></li>
+            <li><a href="service.html">PRIVECY POLICY</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="social-links">
+            <h6>FOLLOW US</h6>
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <span> AGRICKONNECTS Page &copy;<span id="year"></span></span>
+  </footer>
+  <script src="boostrap_5/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+
+  </script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>

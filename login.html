@@ -1,0 +1,227 @@
+<DOCTYPE>
+    <html>
+        <head>
+            <title>log in</title>
+
+        </head>
+        
+        <style>
+        body{background-color:bisque; 
+          color:blueviolet;
+            text-align: center;
+        }
+        input[type="submit"]{ background-color: blue; 
+          color: white;
+
+        }
+        input[type="reset"]{
+            background-color: blue; 
+            color: white;
+
+        }
+        header{
+            background-color: green;
+            color:white;
+            padding:20px;
+            margin: 2px;
+           
+           
+
+    }
+    header h1 a{ color: white;
+    text-decoration: none;
+}
+header h1 a:hover{ background-color: silver;
+    color: purple;
+     padding: 12px 0 12px 24px;
+}
+        header input[type="button"] {background-color:white;
+  color:green;
+  float:right;
+  
+} 
+
+header ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+ /*background-color:gold;*/
+  overflow:hidden;
+  float: center;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
+header ul li a{
+  
+  text-decoration: none;
+float:center;
+}
+
+header ul li a:active{background-color: yellowgreen;
+  color: blueviolet;
+
+}
+header ul li a:hover{ background-color: silver;
+          color: purple;
+           padding: 12px 0 12px 24px;
+           
+          
+}
+ input[type="button"]{
+     background-color: gold;
+     color: white;
+     padding: 8px;
+     margin: 0;
+     border: none;
+   
+ }
+ h1 h3 {
+     float: center;
+ }
+ footer { background-color:green;
+  color:white;
+ font-size:30px;
+font-family: times;
+min-height: fit-content;
+min-width: fit-content;
+margin: 0px;
+   padding: 200px;
+
+}
+footer p a {text-decoration: none;}
+footer ul {list-style-type: none;
+ 
+   
+}
+ footer li a{ list-style-type: none;
+  text-decoration: none;
+}
+        </style>
+        <body>
+            <header>
+                <input type="button" value="LOG OUT --- >" >
+                
+                <h1> Welcome to AGRICKONNECT</h1>
+               <h3> connecting you to your fortune </h3>
+                <ul>
+               <li><a href="index.html">HOME</a></li>
+               <li><a href="index.html">TOP DEALS</a></li>
+               <li><a href="sell.html">SELL</a></li>
+               <li><a href="rent.html">RENT A SPACE</a></li>
+               <li><a href="index.html">HANG-OUT ROOM</a></li>
+               <li><a href="index.html">BLOG</a></li>
+               <li><a href="reg.html">PROMOTE YOUR COMPANY</a></li>
+               <li><a href="ourServices.html">AGRICKONNECT SERVICES</a></li>
+               
+                </ul>
+               
+               
+                               
+                <form action="./search.php" class="header_search_form" method="GET">              
+                  <input type="search" placeholder="Search for anything" required="required">
+                  <input type="submit" class="search_input" name="search" value="search">
+                  
+                  </form>
+            </header>
+
+
+            <h1>LOG IN</h1>
+            E-MAIL: <input type="email">
+            <br>
+                 <br>
+
+            PASSWORD: <input type="password">
+            <br>
+            <form action="./resetPassword.php" method="GET">
+              <input type="submit" > 
+            </form>
+            <form action="./resetPassword.php" method="GET">
+              <input type="reset" name="restPassword" value="Reset password">
+            </form>
+              <br>
+              <br>
+              <form action="./reg.html" method="GET">
+              <input type="button" name="createAnAccount" value="Create an Account" >
+            </form>
+            </a> 
+            
+              <div style="margin-top: 500px;"></div>
+              <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col">
+                            <h6>CATEGORIES</h6>
+                            <ul>
+                                <li><a href="crop.html">CROP</a></li>
+                                <li><a href="animal.html">ANIMAL</a></li>
+                                <li><a href="service.html">SERVICE</a></li>
+                                <li><a href="products.html">PRODUCTS</a></li>
+                                <li><a href="timber.html">TIMBER</a></li>
+                                <li><a href="waste.html">WASTE</a></li>
+                                <li><a href="logistics.html">LOGISTICS</a></li>
+                                <li><a href="land.html">LAND & PROPERTY</a></li>
+                                <li><a href="tourism.html">TOURISM</a></li>
+                                <li><a href="fruit.html">FRUIT</a></li>
+                                <li><a href="equipment.html">EQUIPMENT</a></li>
+                                <li><a href="byProduct">BY PRODUCTS</a></li>
+                                <li><a href="opportunity.html">OPPORTUNITY</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h6>ABOUT AGRICKONNECT</h6>
+                            <p>AGRICKONNECT is a trusted and the most realible online business-to-business(B2B) ecosystem for agricultral produce,products & services 
+                                AGRICKONNECT is designed for everyone. AGRICKONNECT is where we connect you to your fortune by listing your produce, products & services to millions of users across the globe
+                                Are you a crop farmer,herder,bird farmer,fisherman,marketer,accountant,agent,veterinary doctor,food scientist,manufacturer,consultant etc. AGRICKONNECT is a place for you.
+                                We connect the real sellers with genine buyers . USING  AGRICKONNECT IS VERY EASY AND SIMPLE.
+                            </p>
+                        </div>
+                        <div class="footer-col">
+                            <h6>OUR PREMIUM SERVICES</h6>
+                            <ul>
+                              <li><a href="escrow.php">ESCROW</a></li>
+                              <li><a href="rent.html">RENT SPACE</a></li>
+                              <li><a href="ads.php">ADVERTISEMENT</a></li>
+                              <li><a href="errands.php">RUNNING ERRANDS</a></li>
+                              <li><a href="verified.php">VERIFIED BADGE</a></li>
+                              <li><a href="logistics.php">LOGISTICS</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h6>CONTACT US</h6>
+                          <p>+2349032809103</p>  
+                            <br>
+                            <p>info@agrickonnect.com</p>
+                        </div>
+                        <div class="footer-col">
+                            <h6> GET HELP</h6>
+                            <ul>
+                            <li><a href="service.html">FAQ</a></li>
+                            <li><a href="service.html">GUIDE ON HOW TO SELL</a></li>
+                            <li><a href="service.html">GUIDE ON HOW TO BUY</a></li>
+                            <li><a href="service.html">TERMS & CONDITIONS</a></li>
+                            <li><a href="service.html">PRIVECY POLICY</a></li>
+                        </ul>
+                        </div>
+                        <div class="footer-col">
+                            <div class="social-links">   
+                            <h6>FOLLOW US</h6>
+                    
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                
+                            
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <p> AGRICKONNECT  Page &copy; 2019-2021</p>
+                </footer>
+                        </body>  
+                 
+        </body>

@@ -1,24 +1,29 @@
-const userInfoForm = document.getElementById("user-info-form");
-const startBtn = document.getElementById("start-btn");
+function changes() {
 
-let userName = "";
-let userEmail = "";
+    var err = document.getElementsByTagName("body")
+    err[0].style.backgroundColor = "black";
 
-function validateForm(event) {
-    event.preventDefault();
+}
+function change() {
+    var errr = document.getElementsByTagName("body")
+    errr[0].style.backgroundColor = "white";
+}
+document.getElementById("year").innerHTML = new Date().getFullYear()
 
-    userName = document.getElementById("name").value;
-    userEmail = document.getElementById("email").value;
+setTimeout(myFunction, 3000);
 
-    if (userName === "" || userEmail === "") {
-        alert("Please enter your name and email address.");
-    } else {
-        localStorage.setItem("userName", userName);
-        localStorage.setItem("userEmail", userEmail);
-        window.open("./main./start.html", "_parent");
-    }
+function myFunction() {
+    document.getElementById("welcome").innerHTML = "Welcome to AgricKonnects!";
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    startBtn.addEventListener("click", validateForm);
-});
+
+
+setInterval(myFunction, 1000);
+
+function myFunction() {
+    let d = new Date();
+    document.getElementById("times").innerHTML =
+        d.getHours() + ":" +
+        d.getMinutes() + ":" +
+        d.getSeconds();
+}
